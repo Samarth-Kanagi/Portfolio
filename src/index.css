@@ -1,0 +1,100 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  /* Dark mode (default) */
+  body {
+    @apply bg-[#0c0a1d] text-gray-200 antialiased transition-colors duration-300;
+  }
+  /* Light mode */
+  html:not(.dark) body {
+    @apply bg-gray-50 text-gray-800;
+  }
+}
+
+@layer components {
+  /* ---- BUTTONS ---- */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-[10px] px-6 py-3 font-semibold text-white transition-all duration-200 cursor-pointer;
+    background: linear-gradient(135deg, #6C5CE7, #8b73ff);
+    box-shadow: 0 4px 20px rgba(108, 92, 231, 0.3);
+  }
+  .btn-primary:hover {
+    box-shadow: 0 6px 28px rgba(108, 92, 231, 0.5);
+    transform: translateY(-1px);
+  }
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-[10px] px-6 py-3 font-semibold transition-all duration-200 cursor-pointer;
+  }
+  /* Dark */
+  .dark .btn-outline {
+    @apply text-gray-300 border border-white/15 bg-white/5 backdrop-blur-sm;
+  }
+  .dark .btn-outline:hover {
+    @apply text-white border-brand-500/50 bg-brand-500/10;
+  }
+  /* Light */
+  html:not(.dark) .btn-outline {
+    @apply text-gray-600 border border-gray-200 bg-white;
+  }
+  html:not(.dark) .btn-outline:hover {
+    @apply text-brand-600 border-brand-300 bg-brand-50;
+  }
+
+  /* ---- GRADIENT TEXT ---- */
+  .text-gradient {
+    @apply text-transparent bg-clip-text;
+    background-image: linear-gradient(135deg, #8b73ff, #6C5CE7, #a594ff);
+  }
+
+  /* ---- GLASS CARD ---- */
+  .glass-card {
+    @apply backdrop-blur-lg rounded-2xl transition-colors duration-300;
+  }
+  .dark .glass-card {
+    @apply bg-white/[0.04] border border-white/[0.08];
+  }
+  html:not(.dark) .glass-card {
+    @apply bg-white border border-gray-200 shadow-sm;
+  }
+
+  /* ---- SECTION HEADINGS ---- */
+  .section-heading {
+    @apply text-3xl sm:text-4xl font-bold;
+  }
+  .dark .section-heading {
+    @apply text-white;
+  }
+  html:not(.dark) .section-heading {
+    @apply text-gray-900;
+  }
+
+  .section-subheading {
+    @apply mt-4 max-w-2xl text-lg mx-auto;
+  }
+  .dark .section-subheading {
+    @apply text-gray-400;
+  }
+  html:not(.dark) .section-subheading {
+    @apply text-gray-500;
+  }
+
+  /* ---- GREEN BLINKING DOT ---- */
+  .green-dot {
+    @apply inline-block w-2 h-2 rounded-full bg-emerald-400 shrink-0;
+    animation: dot-pulse 1.5s ease-in-out infinite;
+    box-shadow: 0 0 6px rgba(52, 211, 153, 0.6);
+  }
+}
+
+@keyframes dot-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
