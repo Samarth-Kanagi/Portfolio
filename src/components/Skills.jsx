@@ -1,15 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Layout, Server, Database, Code2, Wrench, FileCode2 } from 'lucide-react';
+import { Layout, Server, Database, Code2, Wrench, FileCode2, Brain } from 'lucide-react';
 import { useTheme } from '../ThemeContext';
 
 const skillCategories = [
-  { title: 'Frontend', icon: Layout, skills: ['HTML5', 'CSS3', 'JavaScript', 'ReactJS', 'TailwindCSS', 'Bootstrap5', 'Redux'] },
-  { title: 'Backend', icon: Server, skills: ['Node.js', 'Express.js', 'REST APIs', 'JWT Auth'] },
-  { title: 'Databases', icon: Database, skills: ['MongoDB', 'MySQL'] },
-  { title: 'Languages', icon: Code2, skills: ['JavaScript', 'Python (DSA)'] },
-  { title: 'Dev Tools', icon: Wrench, skills: ['Git', 'GitHub', 'Postman', 'Cloudinary'] },
-  { title: 'Deployment', icon: FileCode2, skills: ['Vercel', 'Render'] },
+  { title: 'Languages', icon: Code2, skills: ['Python', 'JavaScript', 'HTML5', 'CSS3'] },
+  { title: 'Frontend', icon: Layout, skills: ['React.js', 'Redux (Basics)', 'Bootstrap 5', 'Tailwind CSS'] },
+  { title: 'Database', icon: Database, skills: ['MySQL', 'MongoDB'] },
+  { title: 'Backend', icon: Server, skills: ['Node.js', 'Express.js'] },
+  { title: 'Cloud & Deployment', icon: FileCode2, skills: ['Google Cloud Platform (GCP)', 'Vercel', 'Render', 'Cloudinary', 'MongoDB Atlas'] },
+  { title: 'Tools', icon: Wrench, skills: ['Git', 'GitHub', 'Postman', 'Linux/Ubuntu'] },
+  { title: 'Core Concepts', icon: Brain, skills: ['Data Structures and Algorithms (DSA)', 'REST API Design', 'JWT Authentication'] }
 ];
 
 const Skills = () => {
