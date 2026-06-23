@@ -5,7 +5,7 @@ import { useTheme } from "../ThemeContext";
 
 const projects = [
   {
-    title: "InternStatus",
+    title: "InternStatus (Live Demo Soon)",
     subtitle: "Internship Management System",
     period: "March 2026 — Present",
     tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
@@ -16,7 +16,7 @@ const projects = [
       "Implemented role-based authentication and authorization to ensure secure access control and data privacy across the platform.",
     ],
     demo: "#",
-    github: "https://github.com/Samarth-Kanagi",
+    github: "https://github.com/ambadasgote7/InternStatus",
   },
   {
     title: "GUESS.com",
