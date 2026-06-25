@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles } from 'lucide-react';
-import { useTheme } from '../ThemeContext';
+import React from "react";
+import { motion } from "framer-motion";
+import { ArrowRight, Sparkles } from "lucide-react";
+import { useTheme } from "../ThemeContext";
 
 const Hero = () => {
   const { dark } = useTheme();
@@ -13,9 +13,11 @@ const Hero = () => {
     >
       {/* Subtle Background Glow */}
       <div className="absolute inset-0 -z-10 pointer-events-none">
-        <div className={`absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-[120px] ${
-          dark ? 'bg-brand-500/8' : 'bg-brand-500/5'
-        }`} />
+        <div
+          className={`absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-[120px] ${
+            dark ? "bg-brand-500/8" : "bg-brand-500/5"
+          }`}
+        />
       </div>
 
       <motion.div
@@ -24,8 +26,8 @@ const Hero = () => {
         transition={{ duration: 0.5 }}
         className={`mb-6 inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium border ${
           dark
-            ? 'bg-brand-500/10 text-brand-300 border-brand-500/20'
-            : 'bg-brand-50 text-brand-600 border-brand-200'
+            ? "bg-brand-500/10 text-brand-300 border-brand-500/20"
+            : "bg-brand-50 text-brand-600 border-brand-200"
         }`}
       >
         <Sparkles size={14} />
@@ -37,7 +39,7 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
         className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight max-w-4xl ${
-          dark ? 'text-white' : 'text-gray-900'
+          dark ? "text-white" : "text-gray-900"
         }`}
       >
         Hi, I'm <span className="text-gradient">Samarth Kanagi</span>
@@ -47,7 +49,7 @@ const Hero = () => {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.15 }}
-        className={`mt-2 text-xl sm:text-2xl font-semibold ${dark ? 'text-gray-400' : 'text-gray-500'}`}
+        className={`mt-2 text-xl sm:text-2xl font-semibold ${dark ? "text-gray-400" : "text-gray-500"}`}
       >
         Full Stack Web Developer
       </motion.p>
@@ -56,9 +58,11 @@ const Hero = () => {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className={`mt-6 max-w-2xl text-base sm:text-lg leading-relaxed ${dark ? 'text-gray-500' : 'text-gray-500'}`}
+        className={`mt-6 max-w-2xl text-base sm:text-lg leading-relaxed ${dark ? "text-gray-500" : "text-gray-500"}`}
       >
-        Hands-on experience in React, Node.js, Express.js & MongoDB — building responsive web applications, RESTful APIs, and scalable full-stack solutions.
+        Hands-on experience in React, Node.js, Express.js & MongoDB — building
+        responsive web applications, RESTful APIs, and scalable full-stack
+        solutions.
       </motion.p>
 
       <motion.div
