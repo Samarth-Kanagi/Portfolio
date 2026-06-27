@@ -14,9 +14,8 @@ const Hero = () => {
       {/* Subtle Background Glow */}
       <div className="absolute inset-0 -z-10 pointer-events-none">
         <div
-          className={`absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-[120px] ${
-            dark ? "bg-brand-500/8" : "bg-brand-500/5"
-          }`}
+          className={`absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-[120px] ${dark ? "bg-brand-500/8" : "bg-brand-500/5"
+            }`}
         />
       </div>
 
@@ -24,11 +23,10 @@ const Hero = () => {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className={`mb-6 inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium border ${
-          dark
+        className={`mb-6 inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium border ${dark
             ? "bg-brand-500/10 text-brand-300 border-brand-500/20"
             : "bg-brand-50 text-brand-600 border-brand-200"
-        }`}
+          }`}
       >
         <Sparkles size={14} />
         Available for new opportunities
@@ -38,9 +36,8 @@ const Hero = () => {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
-        className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight max-w-4xl ${
-          dark ? "text-white" : "text-gray-900"
-        }`}
+        className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight max-w-4xl ${dark ? "text-white" : "text-gray-900"
+          }`}
       >
         Hi, I'm <span className="text-gradient">Samarth Kanagi</span>
       </motion.h1>

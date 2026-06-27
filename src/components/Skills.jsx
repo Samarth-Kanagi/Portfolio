@@ -8,9 +8,9 @@ const skillCategories = [
   { title: 'Frontend', icon: Layout, skills: ['React.js', 'Redux (Basics)', 'Bootstrap 5', 'Tailwind CSS'] },
   { title: 'Database', icon: Database, skills: ['MySQL', 'MongoDB'] },
   { title: 'Backend', icon: Server, skills: ['Node.js', 'Express.js'] },
-  { title: 'Cloud & Deployment', icon: FileCode2, skills: ['Google Cloud Platform (GCP)', 'Vercel', 'Render', 'Cloudinary', 'MongoDB Atlas'] },
-  { title: 'Tools', icon: Wrench, skills: ['Git', 'GitHub', 'Postman', 'Linux/Ubuntu'] },
-  { title: 'Core Concepts', icon: Brain, skills: ['Data Structures and Algorithms (DSA)', 'REST API Design', 'JWT Authentication'] }
+  { title: 'Deployment', icon: FileCode2, skills: ['Vercel', 'Render', 'Cloudinary', 'MongoDB Atlas'] },
+  { title: 'Tools', icon: Wrench, skills: ['Git', 'GitHub', 'Postman'] },
+  { title: 'Core Concepts', icon: Brain, skills: ["REST API", 'Responsive Web Design', 'Component-Based Architecture', 'API Integration', 'State Management (Basics)'] }
 ];
 
 const Skills = () => {
@@ -34,25 +34,22 @@ const Skills = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
-                className={`glass-card p-6 group transition-colors duration-300 ${
-                  dark ? 'hover:border-brand-500/25' : 'hover:border-brand-300'
-                }`}
+                className={`glass-card p-6 group transition-colors duration-300 ${dark ? 'hover:border-brand-500/25' : 'hover:border-brand-300'
+                  }`}
               >
                 <div className="flex items-center gap-3 mb-5">
-                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors ${
-                    dark ? 'bg-brand-500/10 group-hover:bg-brand-500/20' : 'bg-brand-50 group-hover:bg-brand-100'
-                  }`}>
+                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors ${dark ? 'bg-brand-500/10 group-hover:bg-brand-500/20' : 'bg-brand-50 group-hover:bg-brand-100'
+                    }`}>
                     <Icon size={20} className="text-brand-500" />
                   </div>
                   <h3 className={`text-lg font-bold ${dark ? 'text-white' : 'text-gray-900'}`}>{cat.title}</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {cat.skills.map((skill, j) => (
-                    <span key={j} className={`px-3 py-1 text-xs font-medium rounded-lg ${
-                      dark
-                        ? 'text-gray-300 bg-white/[0.06] border border-white/[0.08]'
-                        : 'text-gray-600 bg-gray-100 border border-gray-200'
-                    }`}>
+                    <span key={j} className={`px-3 py-1 text-xs font-medium rounded-lg ${dark
+                      ? 'text-gray-300 bg-white/[0.06] border border-white/[0.08]'
+                      : 'text-gray-600 bg-gray-100 border border-gray-200'
+                      }`}>
                       {skill}
                     </span>
                   ))}

@@ -85,13 +85,6 @@ const Navbar = () => {
               {dark ? <Sun size={16} /> : <Moon size={16} />}
             </button>
 
-            <a
-              href="/Samarth_Kanagi.pdf"
-              download
-              className="btn-primary text-sm px-5 py-2"
-            >
-              <Download size={15} /> Resume
-            </a>
           </div>
 
           {/* Mobile Toggle */}
@@ -145,13 +138,6 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <a
-                href="/resume.pdf"
-                download
-                className="btn-primary text-sm w-fit mt-2 px-5 py-2"
-              >
-                <Download size={15} /> Resume
-              </a>
             </div>
           </motion.div>
         )}
